@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+
+}
+
+
+.raiderCard{
+  border: 2px solid black;
+  cursor: pointer;
+  flex-basis: 20rem;
+  margin: 0.3rem;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  background-color: blueviolet;
+}
+.raiderCard p{
+  margin: 0;
+}
+.raiderCard h3{
+margin: 0.1rem;
+}
+
+.raiderCard img{
+  border-right: 3px solid black;
+}
+
+.raidCardContainer{
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.updateTime{
+  margin: 0;
+  scale: 0.7;
+}

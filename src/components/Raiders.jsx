@@ -56,7 +56,7 @@ const Raiders = () => {
   };
 
   return (
-    <div className="raidCardContainer">
+    <div className="contentContainer raidCardContainer">
       {raiders.map((raider) => (
         <RaiderCard
           raider={raider}

@@ -11,11 +11,10 @@
   margin: 0.3rem;
   padding: 0;
   display: flex;
-  height: 100%;
   background-color: blueviolet;
 }
-.raiderCard p{
-  margin: 0;
+.raiderCard {
+  margin: 0.2rem;
 }
 .raiderCard h3{
 margin: 0.1rem;
@@ -24,12 +23,14 @@ margin: 0.1rem;
 .raiderCard img{
   border-right: 3px solid black;
 }
-
+.raiderCard p{
+  margin: 0;
+}
 .raidCardContainer{
   width: 100%;
-  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .updateTime{

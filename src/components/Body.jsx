@@ -1,10 +1,11 @@
 import React from "react";
 import Raiders from "./Raiders";
-
+import HomePage from "./HomePage";
 const Body = () => {
   return (
     <div>
-      <Raiders />
+      <HomePage />
+      {/* <Raiders /> */}
     </div>
   );
 };

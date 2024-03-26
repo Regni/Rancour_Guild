@@ -3,7 +3,6 @@
 
 }
 
-
 .raiderCard{
   border: 2px solid black;
   cursor: pointer;
@@ -31,9 +30,19 @@ margin: 0.1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 1rem;
 }
 
+
+
+.raiderCard>img:hover::after{
+  display: none;
+}
+
+
+
 .updateTime{
+  z-index: -1;
   margin: 0;
   scale: 0.7;
 }

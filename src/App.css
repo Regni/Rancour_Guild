@@ -1,7 +1,7 @@
 #root {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0, 1rem;
+  padding: 0 1rem;
   text-align: center;
   width: 100%;
   display: flex;
@@ -12,34 +12,66 @@
 
 
 .contentContainer{
-  
+  width: 100%;
   flex-grow: 1;
+  background-color: #908f8f9c;
+  
 }
 
 nav{
   display: flex;
   list-style: none;
   /* justify-content: space-between; */
-  border: 2px solid red;
+  
   padding: 0;
   
 }
 
 
 
-nav>.navLink{
-  border: 2px solid green;
+nav>a{
   padding: 1rem 1.3rem;
   margin: 0 1rem 0 0;
-  background-color: lightcoral;
+  
+  text-decoration: none;
+  color: white;
+  text-underline-offset: 0.3rem;
+  text-decoration: underline transparent 0.15rem;
+  transition: text-decoration 700ms ease-in-out;
 }
+
+ nav>a:hover{
+  
+  /* text-underline-offset: 0.3rem; */
+  text-decoration-color: white ;
+}
+
+ .active{
+  
+  border-left: 4px dashed rgb(218, 225, 24);
+  border-right: 4px dashed rgb(218, 225, 24);
+  border-radius: 50% 50%;
+  transition: border 700ms ease-in-out;
+  
+  
+ }
+
 
 
 header{
-  width: 100%;
-  max-width: 1100px;
-  border: 2px solid red;
-  padding: 2rem;
+ display: flex;
+ align-items: center;
+}
+.mainLogoContainer{
+  max-width: 8rem;
+  height: 100%;
+  margin-right: 5rem;
+}
+.mainLogoContainer>img{
+  overflow: hidden;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 .logo {
@@ -54,6 +86,15 @@ header{
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+header, footer{
+background-color: rgb(10, 40, 10);
+width: 100%;
+max-width: 1100px;
+padding: 0.5rem;
+box-shadow: 0 3px 8px rgba(0,0,0,1);
+}
+
 
 @keyframes logo-spin {
   from {
@@ -74,6 +115,3 @@ header{
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}

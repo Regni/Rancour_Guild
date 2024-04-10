@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-
+import "../styling/Raiders.css";
 const RaiderCard = ({ raider, handleRaiderData }) => {
   const [mythicDungeonsDone, setMythicDungeonsDone] = useState([]);
 

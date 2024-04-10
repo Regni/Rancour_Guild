@@ -1,14 +1,12 @@
 import React from "react";
-
+import Progress from "../components/Progress";
 const HomePage = () => {
   return (
     <div className="contentContainer">
       <div>
         <h1>Rancour Guild</h1>
       </div>
-      <div>
-        <h2>Progress</h2>
-      </div>
+      <Progress/>
       <div>
         <h2>About us</h2>
       </div>

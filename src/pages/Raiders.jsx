@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import RaiderCard from "./RaiderCard";
+import RaiderCard from "../components/RaiderCard";
 
-import "./Raiders.css";
+import "../styling/Raiders.css";
 const Raiders = () => {
   const [raiders, setRaiders] = useState([]);
   const [loading, setLoading] = useState(true);

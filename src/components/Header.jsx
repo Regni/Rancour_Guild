@@ -11,8 +11,8 @@ const Header = () => {
           <img src={rancourMainLogo} alt="" />
         </div>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/roster">Roster</NavLink>
+          <NavLink className="navItemLink" to="/">Home</NavLink>
+          <NavLink className="navItemLink" to="/roster">Roster</NavLink>
         </nav>
       </header>
       <Outlet />

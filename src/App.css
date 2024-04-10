@@ -21,40 +21,57 @@
 nav{
   display: flex;
   list-style: none;
-  /* justify-content: space-between; */
+  
   
   padding: 0;
   
 }
 
 
-
-nav>a{
-  padding: 1rem 1.3rem;
-  margin: 0 1rem 0 0;
-  
+a, a:visited{
   text-decoration: none;
-  color: white;
-  text-underline-offset: 0.3rem;
-  text-decoration: underline transparent 0.15rem;
-  transition: text-decoration 700ms ease-in-out;
 }
 
- nav>a:hover{
-  
-  /* text-underline-offset: 0.3rem; */
-  text-decoration-color: white ;
-}
+.navItemLink.active::after{
 
- .active{
-  
-  border-left: 4px dashed rgb(218, 225, 24);
-  border-right: 4px dashed rgb(218, 225, 24);
-  border-radius: 50% 50%;
-  transition: border 700ms ease-in-out;
-  
+  width: 100%;
+
   
  }
+
+.navItemLink{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.060em;
+white-space: nowrap;
+position: relative;
+cursor: pointer;
+margin-right: 20px;
+}
+
+
+
+
+.navItemLink:hover::after{
+  width: 100%;
+}
+
+.navItemLink::after{
+  content: "";
+  width: 0px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -8px;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+  transition: width 0.18s ease;
+  display: block;
+}
+
+
 
 
 

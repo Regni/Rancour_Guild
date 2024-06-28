@@ -1,36 +1,27 @@
 import React, { useEffect, useState } from "react";
+import oldRaiderCard from "../components/oldRaiderCard";
 import RaiderCard from "../components/RaiderCard";
 
 import "../styling/Raiders.css";
 const Raiders = () => {
   const [raiders, setRaiders] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [test, setTest] = useState();
-  const officers = [
-    "Regnii",
-    "Nanamiao",
-    "Spotthedrake",
-    "Rickiy",
-    "Wotsitz",
-    "Shurkian",
-  ];
+  const [roster, setRoster] = useState([]);
+
   useEffect(() => {
     const fetchRaiderList = async () => {
       try {
-        await fetch(
-          "https://raider.io/api/v1/guilds/profile?region=eu&realm=draenor&name=Rancour&fields=members"
-        )
-          .then((respons) => respons.json())
-          .then((data) =>
-            setRaiders(
-              data.members.filter(
-                (raider) =>
-                  raider.rank == 4 ||
-                  raider.rank == 5 ||
-                  officers.includes(raider.character.name)
-              )
-            )
-          );
+        await fetch("http://localhost:5000/api/v1/raiders/")
+          .then((respons) => {
+            if (!respons.ok) {
+              throw new Error("network connection error");
+            }
+            return respons.json();
+          })
+          .then((data) => {
+            console.log(data);
+            return setRoster(data);
+          });
       } catch (error) {
         console.log(error);
       }
@@ -57,12 +48,8 @@ const Raiders = () => {
 
   return (
     <div className="contentContainer raidCardContainer">
-      {raiders.map((raider) => (
-        <RaiderCard
-          raider={raider}
-          handleRaiderData={handleRaiderData}
-          key={raider.character.name}
-        />
+      {roster.map((raider) => (
+        <RaiderCard raider={raider} key={raider._id} />
       ))}
     </div>
   );

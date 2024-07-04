@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Raiders from "./pages/Raiders";
 import Apply from "./pages/Apply";
+import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
@@ -11,7 +12,8 @@ function App() {
         <Route path="/" element={<Header />}>
           <Route index element={<HomePage />} />
           <Route path="/roster" element={<Raiders />} />
-          <Route path="/apply" element={<Apply/>} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

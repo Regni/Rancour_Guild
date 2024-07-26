@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import Raiders from "./pages/Raiders";
 import Apply from "./pages/Apply";
 import Login from "./pages/Login";
+import Settings from "./pages/Settings";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/roster" element={<Raiders />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

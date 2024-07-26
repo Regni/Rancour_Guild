@@ -10,19 +10,22 @@ const Header = () => {
       <header>
         <div className="mainLogoContainer">
           <img src={rancourMainLogo} alt="" />
+          <h2 className="rancourMainTitle">Rancour</h2>
         </div>
-        <nav>
-          <NavLink className="navItemLink" to="/">
-            Home
-          </NavLink>
-          <NavLink className="navItemLink" to="/roster">
-            Roster
-          </NavLink>
-          <NavLink className="navItemLink" to="/apply">
-            Apply!
-          </NavLink>
-          <LoginBtn />
-        </nav>
+        <div className="navbar">
+          <nav>
+            <NavLink className="navItemLink" to="/">
+              Home
+            </NavLink>
+            <NavLink className="navItemLink" to="/roster">
+              Roster
+            </NavLink>
+            <NavLink className="navItemLink" to="/apply">
+              Apply!
+            </NavLink>
+          </nav>
+        </div>
+        <LoginBtn />
       </header>
       <Outlet />
       <Footer />

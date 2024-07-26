@@ -10,53 +10,49 @@
   align-items: center;
 }
 
-
-.contentContainer{
+.contentContainer {
   width: 100%;
   flex-grow: 1;
   background-color: #908f8f9c;
-  
 }
-
-nav{
+.loginbutton {
+  position: relative;
+  border: 2px solid red;
+  top: -50px;
+}
+nav {
   display: flex;
   list-style: none;
 
   padding: 0;
-  
 }
 
-
-a, a:visited{
+a,
+a:visited {
   text-decoration: none;
 }
 
-.navItemLink.active::after{
-
-  width: 100%;
-
-  
- }
-
-.navItemLink{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: 20px;
-line-height: 24px;
-letter-spacing: 0.060em;
-white-space: nowrap;
-position: relative;
-cursor: pointer;
-margin-right: 20px;
-}
-
-
-
-
-.navItemLink:hover::after{
+.navItemLink.active::after {
   width: 100%;
 }
 
-.navItemLink::after{
+.navItemLink {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  color: #fab300;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navItemLink:hover::after {
+  width: 100%;
+}
+
+.navItemLink::after {
   content: "";
   width: 0px;
   position: absolute;
@@ -64,30 +60,38 @@ margin-right: 20px;
   left: 50%;
   bottom: -8px;
   height: 4px;
-  background-color: red;
+  background-color: #fab300;
   border-radius: 2px;
   transition: width 0.18s ease;
   display: block;
 }
 
-
-
-
-
-header{
- display: flex;
- align-items: center;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.mainLogoContainer{
-  max-width: 8rem;
+.navbar {
+  border: 2px solid red;
+}
+.mainLogoContainer {
+  border: 2px solid blue;
+  /* max-width: 16rem; */
   height: 100%;
   margin-right: 5rem;
+  display: flex;
 }
-.mainLogoContainer>img{
+.rancourMainTitle {
+  color: #fab300;
+  font-size: 3rem;
+  margin-left: 1rem;
+  margin-top: 3rem;
+}
+.mainLogoContainer > img {
   overflow: hidden;
   display: block;
   height: auto;
-  max-width: 100%;
+  max-width: 10rem;
 }
 
 .logo {
@@ -103,14 +107,14 @@ header{
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-header, footer{
-background-color: rgb(10, 40, 10);
-width: 100%;
-max-width: 1100px;
-padding: 0.5rem;
-box-shadow: 0 3px 8px rgba(0,0,0,1);
+header,
+footer {
+  background-color: rgb(10, 40, 10);
+  width: 100%;
+  max-width: 1100px;
+  padding: 0.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 1);
 }
-
 
 @keyframes logo-spin {
   from {
@@ -130,4 +134,3 @@ box-shadow: 0 3px 8px rgba(0,0,0,1);
 .card {
   padding: 2em;
 }
-
